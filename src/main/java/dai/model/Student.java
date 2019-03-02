@@ -1,25 +1,16 @@
 package main.java.dai.model;
 
-public abstract class Student extends Person {
-    private String name;
-    private int age;
-    private String id;
+public  class Student extends Person {
     private Class aClass;
 
-    public Student(String name) {
-        super(name);
-    }
-
-    public Student(String name, int age) {
-        super(name, age);
-    }
-
-    public Student(String name, int age, String id, Class aClass) {
+    public Student(String name, int age, String id,Class aClass) {
         super(name, age, id);
-        setClass(aClass);
+        this.aClass=aClass;
     }
 
-    public abstract void setClass(Class aClass);
+    public void setaClass(Class aClass){
+        this.aClass = aClass;
+    }
 
     public int getaClass() {
         return this.aClass.getNumber();

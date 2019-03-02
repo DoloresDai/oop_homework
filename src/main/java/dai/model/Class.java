@@ -24,19 +24,24 @@ public class Class {
         this.leader = leader;
     }
 
-    public void assignLeader(Student student) {
+    public void assignLeader(Student student,Teacher teacher) {
         if (this.getNumber() == student.getaClass()) {
-            this.leader=student.getName();
+            this.leader = student.getName();
+            System.out.println("I am "+teacher.getName()+". I know "+ student.getName()+" become Leader of Class "+this.getNumber());
         } else {
             System.out.println("It is not one of us.");
         }
     }
 
-
     public void appendMember(Student student) {
-        student.setClass(this);
+        student.setaClass(this);
     }
-    public void isIn(Student student,Teacher teacher){
-        if()
+
+    public boolean isIn(Student student, Teacher teacher) {
+        for (int elements : teacher.getClasses()) {
+            if (elements == (student.getaClass())) {
+                return true;
+            }
+        }return false;
     }
 }

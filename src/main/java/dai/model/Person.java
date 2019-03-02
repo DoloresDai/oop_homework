@@ -1,21 +1,13 @@
 package main.java.dai.model;
 
 public class Person {
-    private String name;
-    private int age;
+    protected String name;
+    protected int age;
     private String id;
 
-    public Person(String name) {
-        this.name = name;
-    }
-
-    public Person(String name, int age) {
-        this(name);
-        this.age = age;
-    }
-
     public Person(String name, int age, String id) {
-        this(name, age);
+        this.name = name;
+        this.age = age;
         this.id = id;
     }
 
